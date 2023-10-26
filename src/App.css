@@ -54,8 +54,27 @@
 
 .movie-rate {
   color: red;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   font-weight: bold;
   font-size: 1.2em;
   text-decoration: underline;
+}
+
+/* Gaya dasar untuk tombol menuju detail film */
+.detail-button {
+  background-color: #007bff; /* Warna latar belakang */
+  color: #fff; /* Warna teks */
+  padding: 10px 20px; /* Padding pada tombol */
+  border: none; /* Menghilangkan garis tepi */
+  border-radius: 4px; /* Membuat sudut melengkung pada tombol */
+  cursor: pointer; /* Mengubah kursor ketika tombol dihover */
+  text-decoration: none; /* Menghilangkan garis bawah teks */
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px; /* Ruang antara tombol dengan elemen lain */
+  text-align: center; /* Pusatkan teks */
+}
+
+.detail-button:hover {
+  background-color: #0056b3; /* Warna latar belakang saat tombol dihover */
 }

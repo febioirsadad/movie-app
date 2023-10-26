@@ -16,3 +16,16 @@ export const searchMovie = async (q) => {
   );
   return search.data;
 };
+
+export const getMovieDetail = async (movieId) => {
+  try {
+    const response = await axios.get(
+      `${baseUrl}/movie/${movieId}?api_key=${apiKey}`
+    );
+    const movieDetail = response.data;
+    return movieDetail;
+  } catch (error) {
+    console.error("Error fetching movie detail:", error);
+    throw error;
+  }
+};
