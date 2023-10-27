@@ -1,20 +1,19 @@
-import "../App.css";
+import { getPopularMovieList } from "../api";
 import { useEffect, useState } from "react";
-import { getMovieList, searchMovie } from "../api";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../Components/Navbar";
 
-const Home = () => {
-  const [movies, setMovies] = useState([]);
+const PopularMovies = () => {
+  const [popularMovies, setPopularMovies] = useState([]);
 
   useEffect(() => {
-    getMovieList().then((result) => {
-      setMovies(result);
+    getPopularMovieList().then((result) => {
+      setPopularMovies(result);
     });
   }, []);
 
-  const MovieList = () => {
-    return movies.map((movie, i) => {
+  const PopularMovieList = () => {
+    return popularMovies.map((movie, i) => {
       return (
         <div className="movie-wrapper" key={i}>
           <div className="movie-title">{movie.title}</div>
@@ -36,32 +35,20 @@ const Home = () => {
     });
   };
 
-  const search = async (q) => {
-    if (q.length > 3) {
-      const query = await searchMovie(q);
-      // console.log({ query: query });
-      setMovies(query.results);
-    }
-  };
-
   const navigate = useNavigate();
 
   return (
     <div className="App">
       <header className="App-header">
         <h1>playbio-flix</h1>
-        <input
-          placeholder="cari film yang anda sukai..."
-          className="movie-search"
-          onChange={({ target }) => search(target.value)}
-        />
+
         <Navbar />
         <div className="movie-container">
-          <MovieList />
+          <PopularMovieList />
         </div>
       </header>
     </div>
   );
 };
 
-export default Home;
+export default PopularMovies;

@@ -20,6 +20,7 @@
 }
 
 .movie-container {
+  margin-top: 40px;
   width: 90%;
   display: flex;
   flex-wrap: wrap;
@@ -157,4 +158,31 @@
   color: #007bff;
   text-decoration: none;
   font-weight: bold;
+}
+
+ul.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the navbar items */
+ul.navbar li {
+  float: left;
+}
+
+ul.navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Change the color of navbar items when hovered */
+ul.navbar li a:hover {
+  background-color: #555;
 }
