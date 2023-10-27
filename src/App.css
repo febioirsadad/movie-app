@@ -11,6 +11,8 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding-bottom: 40px;
+  text-align: center;
 }
 
 .App-link {
@@ -18,7 +20,7 @@
 }
 
 .movie-container {
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -27,14 +29,21 @@
 }
 
 .movie-wrapper {
-  width: 500px;
+  width: 80%;
+  max-width: 400px;
   background-color: antiquewhite;
   color: black;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  margin: 10px;
+  padding: 10px;
 }
 
 .movie-search {
-  height: 48px;
-  font-size: 24px;
+  width: 90%;
+  max-width: 475px;
+  font-size: 18px;
   margin-bottom: 32px;
   padding: 16px;
   font-weight: bold;
@@ -42,39 +51,110 @@
 }
 
 .movie-title {
+  color: black;
+  margin: 0;
   height: 60px;
-  margin-top: 26px;
+  margin-top: 10px;
   font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+}
+
+.movie-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
 }
 
 .movie-date {
-  margin-top: 26px;
+  color: #555;
+  font-size: 18px;
+  margin-top: 10px;
   font-style: italic;
+  text-align: center;
 }
 
 .movie-rate {
   color: red;
-  margin-bottom: 20px;
+  font-size: 18px;
+  margin-top: 10px;
   font-weight: bold;
-  font-size: 1.2em;
   text-decoration: underline;
+  text-align: center;
 }
 
-/* Gaya dasar untuk tombol menuju detail film */
 .detail-button {
-  background-color: #007bff; /* Warna latar belakang */
-  color: #fff; /* Warna teks */
-  padding: 10px 20px; /* Padding pada tombol */
-  border: none; /* Menghilangkan garis tepi */
-  border-radius: 4px; /* Membuat sudut melengkung pada tombol */
-  cursor: pointer; /* Mengubah kursor ketika tombol dihover */
-  text-decoration: none; /* Menghilangkan garis bawah teks */
-  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  width: 100%;
   font-size: 16px;
-  margin: 10px; /* Ruang antara tombol dengan elemen lain */
-  text-align: center; /* Pusatkan teks */
+  margin: 10px 0;
+  text-align: center;
+  transition: background-color 0.3s;
 }
 
 .detail-button:hover {
-  background-color: #0056b3; /* Warna latar belakang saat tombol dihover */
+  background-color: #0056b3;
+}
+
+.detail-movie-img {
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.detail-movie-title {
+  color: black;
+  margin: 10px 0;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+}
+
+.detail-movie-date {
+  color: #555;
+  font-size: 20px;
+  margin: 10px 0;
+  font-style: italic;
+  text-align: center;
+}
+
+.detail-movie-genre {
+  font-size: 20px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.detail-movie-rate {
+  color: red;
+  font-size: 20px;
+  margin: 10px 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+.detail-movie-overview {
+  font-size: 18px;
+  margin: 20px 10px;
+  text-align: left;
+}
+
+.detail-movie-homepage {
+  font-size: 18px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.detail-movie-homepage a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
 }

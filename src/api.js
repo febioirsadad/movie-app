@@ -7,6 +7,7 @@ export const getMovieList = async () => {
   const movie = await axios.get(
     `${baseUrl}/movie/popular?page=1&api_key=${apiKey}`
   );
+  // console.log({ movieList: movie });
   return movie.data.results;
 };
 
@@ -20,8 +21,9 @@ export const searchMovie = async (q) => {
 export const getMovieDetail = async (movieId) => {
   try {
     const response = await axios.get(
-      `${baseUrl}/movie/${movieId}?api_key=${apiKey}`
+      `${baseUrl}/movie/${movieId}?page=1&api_key=${apiKey}`
     );
+    // console.log({ movieDetail: response });
     const movieDetail = response.data;
     return movieDetail;
   } catch (error) {
